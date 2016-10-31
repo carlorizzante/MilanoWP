@@ -1,0 +1,107 @@
+/**
+ * LAYOUT RULES
+ *
+ * Ideally, layout styles can be divided into major
+ * and minor styles based on reuse. Major layout styles
+ * such as header and footer are traditionally styled
+ * using ID selectorsbut take the time to think about the
+ * elements that are common across all components of the
+ * page and use class selectors where appropriate.
+ *
+ * However, you may want to use classes for layout modifiers
+ * that can be applied across the entire site, and to
+ * multiple elements on the same page.
+ *
+ * {@link https://smacss.com/book/type-layout}
+ *
+ * @package MilanoWP
+ * @since 0.9.0
+ */
+
+
+// -------------------------------------
+// Extensions to Foundation Grid
+// -------------------------------------
+
+.fullwidth {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: initial;
+}
+
+
+// -------------------------------------
+// Posts and post content
+// -------------------------------------
+
+#content {
+	#inner-content {
+		padding: 1rem 0rem;
+	}
+}
+
+.entry-content {
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.alignleft, img.alignleft {
+		margin-right: 1.5em;
+		display: inline;
+		float: left;
+	}
+	.alignright, img.alignright {
+		margin-left: 1.5em;
+		display: inline;
+		float: right;
+	}
+	.aligncenter, img.aligncenter {
+		margin-right: auto;
+		margin-left: auto;
+		display: block;
+		clear: both;
+	}
+
+	video, object {
+		max-width: 100%;
+		height: auto;
+		}
+
+	pre {
+		background: #eee;
+		border: 1px solid #cecece;
+		padding: 10px;
+		}
+}
+
+
+/**
+ * Sidebars & asides
+ */
+
+// -------------------------------------
+// Sidebar
+// -------------------------------------
+
+.sidebar {}
+
+
+// -------------------------------------
+// Search Results
+// -------------------------------------
+
+.search-result {}
+#searchsubmit {}
+
+
+// -------------------------------------
+// Footer styling
+// -------------------------------------
+
+.footer {
+	clear: both;
+	margin-top: 1em;
+}

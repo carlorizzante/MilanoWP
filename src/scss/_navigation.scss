@@ -1,0 +1,47 @@
+/**
+ * MENU RULES
+ *
+ * Helpers for tuning Foundation navigation
+ * to nicely work with WordPress.
+ *
+ * Learn more about Navigation blocks in Foundation 6
+ * {@link http://foundation.zurb.com/sites/docs/responsive-navigation.html}
+ * {@link http://foundation.zurb.com/sites/docs/sticky.html#sticky-navigation}
+ *
+ * @package MilanoWP
+ * @since 0.9.0
+ */
+
+
+// -------------------------------------
+// Fixed navigation | top of the page
+// -------------------------------------
+.fixed-top-navigation {
+
+  @media #{$medium-up} {
+    .title-bar {
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .off-canvas-content {
+      padding-top: 3.4rem;
+    }
+  }
+}
+
+// -------------------------------------
+// Fixes :after element for dropdown menus
+// -------------------------------------
+.is-dropdown-submenu .is-dropdown-submenu-parent>a:after {
+  right: 8px;
+  margin-top: -4px;
+}
+
+// -------------------------------------
+// Colors the element on :hover
+// -------------------------------------
+.submenu > .menu-item:hover {
+  background-color: rgba(0,0,0,0.1);
+}

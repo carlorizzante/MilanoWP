@@ -1,0 +1,107 @@
+# -----------------------------------------------------------------
+# .gitignore for MilanoWP
+#
+# This file is tailored for a WordPress theme.
+# It specifies intentionally untracked files to ignore
+# http://git-scm.com/docs/gitignore
+#
+# NOTES:
+# The purpose of gitignore files is to ensure that certain files not
+# tracked by Git remain untracked.
+#
+# To ignore uncommitted changes in a file that is already tracked,
+# use `git update-index --assume-unchanged`.
+#
+# To stop tracking a file that is currently tracked,
+# use `git rm --cached`
+#
+# Change Log:
+# 20161011 track Babel and Bower config files
+# 20161010 include screenshot.png and icons
+# 20160906 ignore temp/wip PHP files (example: __filename.php)
+# 20160303 remove WP root folders
+#
+# -----------------------------------------------------------------
+
+# ignore sass cache
+# update accordingly might source files be relocated somewhere else
+src/scss/.sass-cache/*
+
+# ignore all files starting with .
+.*
+
+# ignore temp/tip PHP files (example: __filename.php)
+__*.php
+
+# track this file .gitignore (i.e. do NOT ignore it)
+!.gitignore
+
+# track Babel and Bower configuration files
+!.babelrc
+!.bowerrc
+
+# track .editorconfig file (i.e. do NOT ignore it)
+!.editorconfig
+
+# track readme.md in the root (i.e. do NOT ignore it)
+!readme.md
+
+# ignore all files that start with ~
+~*
+
+# ignore OS generated files
+ehthumbs.db
+Thumbs.db
+
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+
+# ignore log files and databases
+logs
+*.log
+*.sql
+*.sqlite
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ignore image files
+*.png
+*.gif
+*.jpg
+*.jpeg
+*.psd
+*.tif
+*.tiff
+*.eps
+
+# include favicon, mobile icons, and default logo
+!favicon.ico
+!favicon.png
+!apple-icon-touch.png
+!win8-tile-icon.png
+!login-logo.png
+!screenshot.png
+
+# ignore node/gulp dependency directories
+node_modules/
+
+# ignore bower components
+bower_components/

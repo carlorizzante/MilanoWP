@@ -1,0 +1,143 @@
+/**
+ * TYPOGRAPHY
+ *
+ * You can use this file to override the deault typography
+ * for Foundation, that isn't that exciting.
+ *
+ * Keep in mind that a best practice, while designing
+ * responsive sites, is to think about your typographic
+ * rules in em or rem, that are proportional and not
+ * fixed as px. However, doing so you may end up affecting
+ * how the Layout rules behave.
+ *
+ * @package MilanoWP
+ * @since 0.9.0
+ */
+
+
+// -------------------------------------
+// Type
+// -------------------------------------
+
+/**
+ * Import Roboto Slab and Open Sans from Google Fonts
+ */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300italic);
+
+
+/**
+ * Set Open Sans Light as default type face site-wide
+ * Note that _settings.scss sets $body-font-family to
+ * Open Sans as well. Since we loaded Open Sans Light,
+ * it is not necessary to set font-weight to light.
+ *
+ */
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+// -------------------------------------
+// Links & anchors
+// -------------------------------------
+
+// Default state
+a,
+a:link,
+a:visited {
+
+	// Mobile tap color
+	&:link {
+		//Highlight links on iOS, Similar to :hover for mobile devices.
+		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+}
+
+// Active state
+a:hover,
+a:focus,
+a:active {}
+
+
+// -------------------------------------
+// Titles and headers
+// -------------------------------------
+
+// Removing text decoration from all headline links
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	a { text-decoration: none; }
+}
+
+h1, .h1 {}
+h2, .h2 {}
+h3, .h3 {}
+h4, .h4 {}
+h5, .h5 {}
+
+// Titles for Home and Archives
+// h2.entry-title,
+.entry-title {}
+
+// Titles for Single Posts
+.single-title {}
+
+// Titles for Pages
+.page-title {
+
+	/* Remove Foundation vcard styling from author page titles */
+	.vcard {
+		border: 0px;
+		padding: 0px;
+	}
+}
+
+// Title for the Search results page
+.archive-title {}
+
+
+// -------------------------------------
+// Blockquotes
+// -------------------------------------
+
+blockquote {}
+
+
+// -------------------------------------
+// Code blocks
+// -------------------------------------
+
+code {
+	padding: 0.5em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	margin: 0;
+	font-size: 85%;
+	background-color: rgba(0,0,0,0.04) !important;
+	border-radius: 3px;
+	border: none;
+}
+
+
+// -------------------------------------
+// Stylizer
+// -------------------------------------
+
+.underlined {
+	border-bottom: 1px solid inherit;
+}
+
+
+// -------------------------------------
+// Lists and Item lists
+// -------------------------------------
+
+li {
+	position: relative;
+	padding-left: 1.2rem;
+}
+li > i {
+	position: absolute;
+	left: -0.2rem;
+	top: 0.2rem;
+	opacity: 0.5;
+}

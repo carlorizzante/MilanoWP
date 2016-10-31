@@ -1,0 +1,47 @@
+/**
+ * VARIABLES
+ *
+ * Example of what you can use the _variables.scc file for
+ * and how to organize its content in sections.
+ *
+ * @package MilanoWP
+ * @since 0.9.0
+ *
+ *
+ * TABLE OF CONTENT
+ * ----------------
+ * 1. Colors
+ * 2. Typography
+ * 3. Layout
+ * 4. Borders
+ */
+
+// 1. Colors
+// -------------
+$primary-color: #44CCDF;
+$background-color: #F7F7F7;
+$box-background-color: white;
+
+// 2. Typography
+// -------------
+$font-family: 'Raleway', sans-serif;
+$text-color: #333;
+$text-color-alt: white;
+$font-size: 1rem;     // 16px in most latest browsers
+$line-height: 1.5rem; // 24px
+$title-color: #000;
+
+// 3. Layout
+// -------------
+$global-margin: 1rem; // ~16px
+
+// 4. Borders
+// -------------
+$border-color-light: #E4E4E4;
+$border-light: 1px solid $border-color-light;
+$border-primary: 4px solid $primary-color;
+
+// 5. Inputs & forms
+// -----------------
+$submit-background-color: $primary-color;
+$submit-background-color-alt: #f0f0f0;

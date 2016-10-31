@@ -1,0 +1,29 @@
+/**
+ * STATES
+ *
+ * A state is something that augments and overrides
+ * all other styles. For example, an accordion section
+ * may be in a collapsed or expanded state. A message
+ * may be in a success or error state.
+ *
+ * {@link https://smacss.com/book/type-state}
+ *
+ * States are generally applied to the same element as
+ * a layout rule or applied to the same element as a
+ * base module class.
+ *
+ * Remember to remove the comment in _main.scss if you
+ * want to import this file into the final style.css file
+ *
+ * @package MilanoWP
+ * @since 0.9.0
+ */
+
+
+// Some examples
+
+.is-hidden {}
+
+.is-active {}
+
+.is-disabled {}

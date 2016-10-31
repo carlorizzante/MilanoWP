@@ -1,0 +1,51 @@
+/**
+ * LOGIN STYLES
+ *
+ * This stylesheet is loaded is only on the login page. This way you can style
+ * the login page. It won't affect any other page, admin or front-end.
+ *
+ * Make sure functions/admin.php is activated in your functions.php file.
+ *
+ * This stylesheet is turned off by default.
+ *
+ * For more info, check out the codex:
+ * {@link http://codex.wordpress.org/Creating_Admin_Themes}
+ * @package MilanoWP
+ * @since 0.9.0
+ */
+
+
+body.login {}
+
+#login {}
+
+
+// -------------------------------------
+// Custom logo on the login page
+// -------------------------------------
+
+.login h1 a {
+	background: url(../images/login-logo.png) no-repeat top center;
+	width: 326px;
+	height: 67px;
+	text-indent: -9999px;
+	overflow: hidden;
+	padding-bottom: 15px;
+	display: block;
+}
+
+
+// -------------------------------------
+// Custom form styling
+// -------------------------------------
+
+form {}
+
+body form .input {}
+
+
+// -------------------------------------
+// Custom submit button
+// -------------------------------------
+
+#wp-submit {}

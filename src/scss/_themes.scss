@@ -1,0 +1,40 @@
+/**
+ * THEMES
+ *
+ * Theme Rules aren't as often used within a project and
+ * because of that, they aren't included as part of the
+ * core types. Some projects may have a need for them,
+ * though, and you may want to use this section to keep
+ * them separated from the overall styling of the site,
+ * and apply them only when requested.
+ *
+ * {@link https://smacss.com/book/type-theme}
+ *
+ * Below an example, where the theme-class will be applied to
+ * the body of the page procedurally via PHP or via Javascript.
+ *
+ * Remember to remove the comment in _main.scss if you
+ * want to import this file into the final style.css file
+ *
+ * @package MilanoWP
+ * @since 0.9.0
+ */
+
+
+
+// -------------------------------------
+// White theme
+// -------------------------------------
+
+body.theme-white {
+ 	// all changind rules here
+}
+
+
+// -------------------------------------
+// Black theme
+// -------------------------------------
+
+body.theme-black {
+ 	// ...
+}

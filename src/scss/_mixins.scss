@@ -1,0 +1,39 @@
+/**
+ * MIXINS
+ *
+ * Foundation 6 comes packed with functions and mixins!
+ * Perhaps what you're looking for is already provided
+ * by the framework.
+ *
+ * {@link http://foundation.zurb.com/sites/docs/sass-mixins.html}
+ * {@link http://foundation.zurb.com/sites/docs/sass-functions.html}
+ *
+ * @package MilanoWP
+ * @since 0.9.0
+ */
+
+
+// -------------------------------------
+// Image-replacement
+// -------------------------------------
+
+// http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+.image-replacement {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+
+// -------------------------------------
+// CSS Gradients
+// -------------------------------------
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+@mixin css-gradient($from: #dfdfdf, $to: #f8f8f8) {
+	background-color: $to;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+	background-image: -webkit-linear-gradient(top, $from, $to);
+	background-image: -moz-linear-gradient(top, $from, $to);
+	background-image: -o-linear-gradient(top, $from, $to);
+	background-image: linear-gradient(to bottom, $from, $to);
+}

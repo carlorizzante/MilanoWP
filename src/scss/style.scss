@@ -1,0 +1,63 @@
+/**
+ * MAIN STYLESHEET
+ *
+ * All parts are included starting from here. Think
+ * of it like the control room of your theme. From
+ * here you can enable/disable parts of the Foundation
+ * framework, or of your theme that you won't need.
+ *
+ * Needlessly to say, you can add/import custom parts
+ * as well. If you do so, I'd recommend to import those
+ * parts at the end of this file. It will be easier to
+ * override them keeping your rules neat and minimal.
+ *
+ * It's always a good thing to keep your CSS/Sass well
+ * organized. I usually try to follow the SMACSS approach
+ * to design complex stylesheets and CSS set of rules.
+ *
+ * {@link https://smacss.com/book/categorizing}
+ *
+ * Also, keep in mind that if you're designing a responsive
+ * site and styling, the typography can affect the layout,
+ * especially if you're using em or rem for breakpoint.
+ *
+ * @package MilanoWP
+ * @since 0.9.0
+ */
+
+
+// -------------------------------------
+// Foundation
+// -------------------------------------
+@import "foundation"; // Settings and components
+
+
+// -------------------------------------
+// Import FontAwesome
+// -------------------------------------
+@import "../../vendor/font-awesome/css/font-awesome.min.css";
+
+
+// -------------------------------------
+// Loading theme specific components
+// -------------------------------------
+@import "mixins";
+@import "variables";
+@import "typography";
+@import "layout";
+@import "navigation";
+@import "modules";
+@import "states";
+@import "themes"; // Use this file to create variations of the current theme
+
+
+// -------------------------------------
+// Retina/HD styles
+// -------------------------------------
+@import "2x";
+
+
+// -------------------------------------
+// Print styles
+// -------------------------------------
+@import "print";

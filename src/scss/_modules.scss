@@ -1,0 +1,410 @@
+/**
+ * MODULES
+ *
+ * A Module is a more discrete component of the page.
+ * It is your navigation bars and your carousels and
+ * your dialogs and your widgets and so on. This is
+ * the meat of the page. Modules sit inside Layout
+ * components. Modules can sometimes sit within other
+ * Modules, too. Each Module should be designed to exist
+ * as a standalone component. In doing so, the page will
+ * be more flexible. If done right, Modules can easily
+ * be moved to different parts of the layout without
+ * breaking.
+ *
+ * {@link https://smacss.com/book/type-module}
+ *
+ * When defining the rule set for a module, avoid using
+ * IDs and element selectors, sticking only to class
+ * names. A module will likely contain a number of
+ * elements and there is likely to be a desire to use
+ * descendent or child selectors to target those elements.
+ *
+ * @package MilanoWP
+ * @since 0.9.0
+ */
+
+
+
+// -------------------------------------
+// Navigation and Menus
+// -------------------------------------
+
+.top-bar {
+	.title-area {
+		z-index: 1;
+	}
+}
+
+.off-canvas-list {
+	ul {
+		margin-left: 0;
+		li {
+			a {
+				border-bottom: 0px;
+			}
+		}
+		.dropdown {
+			margin-left: 20px;
+		}
+	}
+}
+
+
+// -------------------------------------
+// Headers and Hero banners
+// -------------------------------------
+
+.header {
+	ul.off-canvas-list li {
+		list-style: none;
+	}
+}
+
+
+// -------------------------------------
+// Gallery and gallery captions
+// -------------------------------------
+
+.gallery {
+	dl {
+		a {}
+		img {}
+	}
+	dt {}
+	dd {}
+}
+
+.gallery-caption {}
+.size-full {}
+.size-large {}
+.size-medium {}
+.size-thumbnail {}
+
+.wp-caption {
+	max-width: 100%;
+	background: #eee;
+	padding: 5px;
+
+	/* Images inside wp-caption */
+	img {
+		max-width: 100%;
+		margin-bottom: 0;
+		width: 100%;
+	}
+
+	p.wp-caption-text {
+		font-size: 0.85em;
+		margin: 4px 0 7px;
+		text-align: center;
+	}
+}
+
+
+// -------------------------------------
+// Page navigation
+// -------------------------------------
+
+.page-navigation {
+	margin-top: 1rem;
+}
+
+
+// -------------------------------------
+// Widgets
+// -------------------------------------
+
+.widgettitle {}
+
+.widget {
+	ul {
+		margin: 0;
+
+		li {
+			list-style: none;
+
+			&:first-child {}
+
+			&:last-child {}
+
+			a {}
+
+			// deep nesting
+			ul {}
+
+		}
+	}
+}
+
+
+// -------------------------------------
+// Comments
+// -------------------------------------
+
+#comments {
+	.commentlist {
+		margin-left: 0px;
+	}
+}
+
+#respond {
+	ul {
+		margin-left: 0px;
+	}
+}
+
+.commentlist {
+	li {
+		position: relative;
+		clear: both;
+		overflow: hidden;
+		list-style-type: none;
+		margin-bottom: 1.5em;
+		padding: 0.7335em 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		ul.children {
+			margin: 0;
+
+			li {}
+
+			.comment {}
+			.alt {}
+			.odd {}
+			.even {}
+			.depth-1 {} /* Change number for different depth */
+			.byuser {}
+			.bypostauthor {}
+			.comment-author-admin {}
+
+		}
+	}
+
+	li[class*=depth-] {
+		margin-top: 1.1em;
+	}
+
+	li.depth-1 {
+		margin-left: 0;
+		margin-top: 0;
+	}
+
+	li:not(.depth-1) {
+		margin-left: 10px;
+		margin-top: 0;
+		padding-bottom: 0;
+	}
+
+	li.depth-2 {}
+	li.depth-3 {
+	}
+	li.depth-4 {}
+	li.depth-5 {}
+
+	/* General comment classes */
+	.alt {}
+	.odd {
+	}
+	.even {
+	}
+	.parent {}
+	.comment {}
+	.children {}
+	.pingback {}
+	.bypostauthor {}
+	.comment-author {}
+	.comment-author-admin {}
+	.thread-alt {}
+	.thread-odd {}
+	.thread-even {}
+
+	.vcard {
+		margin-left: 50px;
+
+		cite.fn {
+			font-weight: 700;
+			font-style: normal;
+
+			a.url {}
+
+		}
+
+		time {
+			float: right;
+
+			a {
+				color: #999;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+
+			}
+
+		}
+
+		img.photo {}
+
+		img.avatar {
+			position: absolute;
+			left: 10px;
+			padding: 2px;
+			border: 1px solid #cecece;
+			background: #fff;
+		}
+
+	} /* END .commentlist .vcard */
+
+
+	/* comment meta */
+	.comment-meta {
+		a {}
+	}
+
+	.commentmetadata {
+		a {}
+	}
+
+	/* comment content */
+	.comment_content {
+
+		p {
+			margin: 0.7335em 0 1.5em;
+			font-size: 1em;
+			line-height: 1.5em;
+		}
+
+	} /* END .commentlist .comment_content */
+
+	.comment-reply-link {
+		float: right;
+
+		&:hover,
+		&:focus {
+
+		}
+
+	} /* END .commentlist .comment-reply-link */
+
+} /* END .commentlist */
+
+
+// -------------------------------------
+// Comment form
+// -------------------------------------
+
+.respond-form {
+	margin: 1.5em 10px;
+	padding-bottom: 2.2em;
+
+	form {
+		margin: 0.75em 0;
+
+		li {
+			list-style-type: none;
+			clear: both;
+			margin-bottom: 0.7335em;
+
+			label,
+			small {
+				display: none;
+			}
+		}
+
+		input[type=text],
+		input[type=email],
+		input[type=url],
+		textarea {
+			padding: 3px 6px;
+			background: #efefef;
+			border: 2px solid #cecece;
+			line-height: 1.5em;
+
+			&:focus {
+				background: #fff;
+			}
+
+			// form validation
+			&:invalid {
+				outline: none;
+				border-color: #fbc2c4;
+				background-color: #f6e7eb;
+				-webkit-box-shadow: none;
+				   -moz-box-shadow: none;
+				    -ms-box-shadow: none;
+						box-shadow: none;
+			}
+		}
+
+		input[type=text],
+		input[type=email],
+		input[type=url] {
+			max-width: 400px;
+			min-width: 250px;
+		}
+
+		textarea {
+			resize: none;
+			width: 97.3%;
+			height: 150px;
+		}
+
+	}
+}
+
+/* comment submit button */
+#submit {}
+
+/* comment form title */
+#comment-form-title {
+	margin: 0 0 1.1em;
+}
+
+/* cancel comment reply link */
+#cancel-comment-reply {
+	a {}
+}
+
+/* logged in comments */
+.comments-logged-in-as {}
+
+#allowed_tags {
+	margin: 1.5em 10px 0.7335em 0;
+}
+
+.nocomments {
+	margin: 0 20px 1.1em;
+}
+
+
+// -------------------------------------
+// Gravity form with Foundation
+// -------------------------------------
+
+.gform_body ul {
+    list-style: none outside none;
+    margin: 0;
+}
+
+
+// -------------------------------------
+// Post meta
+// -------------------------------------
+
+.byline {
+	color: #999;
+	time {}
+}
+
+
+// -------------------------------------
+// Add Foundation styling to password protect button
+// -------------------------------------
+
+.post-password-form input[type="submit"] {
+	@include button;
+}
