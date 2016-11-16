@@ -32,6 +32,38 @@
 
 
 // -------------------------------------
+// Fix alignment for Archive Grid elements
+// -------------------------------------
+@media screen and (min-width: 40em) {
+  .row .row.archive-grid {
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+
+
+// -------------------------------------
+// Align the last element within the grid to the left
+// -------------------------------------
+[class*="column"]+[class*="column"]:last-child,
+[class*="columns"]+[class*="columns"]:last-child,
+.row .column, .row .columns {
+  float: left !important;
+}
+
+
+// -------------------------------------
+// Constrains for main content
+// -------------------------------------
+// Add class .constrained to body to take effect
+
+body.constrained .off-canvas-content {
+  margin: 0 auto;
+  max-width: 80rem; // Change the max-width to adjust off-canvas-content
+}
+
+
+// -------------------------------------
 // Posts and post content
 // -------------------------------------
 

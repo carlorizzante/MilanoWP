@@ -18,48 +18,44 @@
 get_header(); ?>
 
 	<div id="content">
-
 		<div id="inner-content" class="row">
+	    <main id="main" class="large-8 medium-8 columns" role="main">
 
-		    <main id="main" class="large-8 medium-8 columns" role="main">
+				<header>
+					<h1 class="page-title"><?php the_archive_title();?></h1>
+					<?php the_archive_description('<div class="taxonomy-description">', '</div>');?>
+				</header>
 
-		    	<header>
-		    		<h1 class="page-title"><?php the_archive_title();?></h1>
-						<?php the_archive_description('<div class="taxonomy-description">', '</div>');?>
-		    	</header>
+				<div class="row archive-grid" data-equalizer>
 
-					<div class="row archive-grid" data-equalizer>
+		    	<?php if (have_posts()) : while (have_posts()) : the_post();
 
-			    	<?php if (have_posts()) : while (have_posts()) : the_post();
+						/*
+						 * Include the Post-Format-specific template for the content.
+						 * If you want to override this in a child theme, then include a file
+						 * called content-___.php (where ___ is the Post Format name) inside
+						 * /parts directory and that will be used instead.
+						 */
+						get_template_part( 'parts/content', 'archive-grid' ); ?>
 
-							/*
-							 * Include the Post-Format-specific template for the content.
-							 * If you want to override this in a child theme, then include a file
-							 * called content-___.php (where ___ is the Post Format name) inside
-							 * /parts directory and that will be used instead.
-							 */
-							get_template_part( 'parts/content', 'archive-grid' ); ?>
+					<?php endwhile; ?>
 
-						<?php endwhile; ?>
+						<?php milano_page_navi(); ?>
 
-							<?php milano_page_navi(); ?>
+					<?php else : // If no content, include the "No posts found" template. ?>
 
-						<?php else : // If no content, include the "No posts found" template. ?>
+						<?php get_template_part( 'parts/content', 'none' ); ?>
 
-							<?php get_template_part( 'parts/content', 'none' ); ?>
+					<?php endif; ?>
 
-						<?php endif; ?>
-
-					</div>
-
-				</main> <!-- END #main -->
-
-				<div id="sidebar-primary" class="sidebar large-4 medium-4 columns" role="complementary">
-					<?php get_sidebar("primary"); ?>
 				</div>
+			</main> <!-- END #main -->
 
-	    </div> <!-- END #inner-content .row -->
+			<div id="sidebar-primary" class="sidebar large-4 medium-4 columns" role="complementary">
+				<?php get_sidebar("primary"); ?>
+			</div>
 
+    </div> <!-- END #inner-content .row -->
 	</div> <!-- END #content -->
 
 <?php get_footer(); ?>

@@ -45,7 +45,9 @@
 
 	    </main> <!-- END #main -->
 
-	    <?php get_sidebar(); ?>
+			<div id="sidebar-primary" class="sidebar large-4 medium-4 columns" role="complementary">
+				<?php get_sidebar("primary"); ?>
+			</div>
 
 	</div> <!-- END #inner-content .row -->
 
