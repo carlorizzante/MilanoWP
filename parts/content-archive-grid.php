@@ -13,39 +13,21 @@
  * @package MilanoWP
  * @since 0.9.0
  */
+ ?>
 
-// Adjust the amount of rows in the grid
-$grid_columns = 4; ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class("large-3 medium-4 columns panel"); ?> role="article" data-equalizer-watch>
 
-<?php if( 0 === ( $wp_query->current_post  )  % $grid_columns ): ?>
+	<section class="featured-image" itemprop="articleBody">
+		<?php the_post_thumbnail('full'); ?>
+	</section> <!-- END article > section -->
 
-    <div class="row archive-grid" data-equalizer>
+	<header class="entry-header">
+		<h3 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+		<p class="byline">Posted on <?php the_time('F j, Y') ?> by <?php the_author_posts_link(); ?>  - <?php the_category(', ') ?></p>
+	</header> <!-- END article > header -->
 
-<?php endif; ?>
+	<section class="entry-content" itemprop="articleBody">
+		<?php the_excerpt('<button class="tiny">' . __( 'Read more...', 'milano' ) . '</button>'); ?>
+	</section> <!-- END article > section -->
 
-		<div class="large-3 medium-3 columns panel" data-equalizer-watch>
-
-			<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">
-
-				<section class="featured-image" itemprop="articleBody">
-					<?php the_post_thumbnail('full'); ?>
-				</section> <!-- END article > section -->
-
-				<header class="entry-header">
-					<h3 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-					<p class="byline">Posted on <?php the_time('F j, Y') ?> by <?php the_author_posts_link(); ?>  - <?php the_category(', ') ?></p>
-				</header> <!-- END article > header -->
-
-				<section class="entry-content" itemprop="articleBody">
-					<?php the_content('<button class="tiny">' . __( 'Read more...', 'milano' ) . '</button>'); ?>
-				</section> <!-- END article > section -->
-
-			</article> <!-- END article -->
-
-		</div>
-
-<?php if( 0 === ( $wp_query->current_post + 1 )  % $grid_columns ||  ( $wp_query->current_post + 1 ) ===  $wp_query->post_count ): ?>
-
-   </div> <!-- END .row -->
-
-<?php endif; ?>
+</article> <!-- END article -->

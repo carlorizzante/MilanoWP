@@ -9,8 +9,8 @@
  * page and use class selectors where appropriate.
  *
  * However, you may want to use classes for layout modifiers
- * that can be applied across the entire site, and to
- * multiple elements on the same page.
+ * that can be applied across the entire site and to multiple
+ * elements on the same page.
  *
  * {@link https://smacss.com/book/type-layout}
  *
@@ -48,17 +48,20 @@
 		height: auto;
 	}
 
-	.alignleft, img.alignleft {
+	.alignleft, img.alignleft,
+  .align-left, img.align-left {
 		margin-right: 1.5em;
 		display: inline;
 		float: left;
 	}
-	.alignright, img.alignright {
+	.alignright, img.alignright,
+  .align-right, img.align-right {
 		margin-left: 1.5em;
 		display: inline;
 		float: right;
 	}
-	.aligncenter, img.aligncenter {
+	.aligncenter, img.aligncenter,
+  .align-center, img.align-center {
 		margin-right: auto;
 		margin-left: auto;
 		display: block;

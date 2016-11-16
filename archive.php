@@ -25,32 +25,38 @@ get_header(); ?>
 
 		    	<header>
 		    		<h1 class="page-title"><?php the_archive_title();?></h1>
-					<?php the_archive_description('<div class="taxonomy-description">', '</div>');?>
+						<?php the_archive_description('<div class="taxonomy-description">', '</div>');?>
 		    	</header>
 
-		    	<?php if (have_posts()) : while (have_posts()) : the_post();
+					<div class="row archive-grid" data-equalizer>
 
-						/*
-						 * Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) inside
-						 * /parts directory and that will be used instead.
-						 */
-						get_template_part( 'parts/content', 'archive' ); ?>
+			    	<?php if (have_posts()) : while (have_posts()) : the_post();
 
-					<?php endwhile; ?>
+							/*
+							 * Include the Post-Format-specific template for the content.
+							 * If you want to override this in a child theme, then include a file
+							 * called content-___.php (where ___ is the Post Format name) inside
+							 * /parts directory and that will be used instead.
+							 */
+							get_template_part( 'parts/content', 'archive-grid' ); ?>
 
-						<?php milano_page_navi(); ?>
+						<?php endwhile; ?>
 
-					<?php else : // If no content, include the "No posts found" template. ?>
+							<?php milano_page_navi(); ?>
 
-						<?php get_template_part( 'parts/content', 'none' ); ?>
+						<?php else : // If no content, include the "No posts found" template. ?>
 
-					<?php endif; ?>
+							<?php get_template_part( 'parts/content', 'none' ); ?>
+
+						<?php endif; ?>
+
+					</div>
 
 				</main> <!-- END #main -->
 
-				<?php get_sidebar(); ?>
+				<div id="sidebar-primary" class="sidebar large-4 medium-4 columns" role="complementary">
+					<?php get_sidebar("primary"); ?>
+				</div>
 
 	    </div> <!-- END #inner-content .row -->
 

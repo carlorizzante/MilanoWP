@@ -18,8 +18,8 @@
 function milano_setup_sidebars() {
 
 	register_sidebar(array(
-		'id'            => 'sidebar1',
-		'name'          => __('Sidebar 1', 'milano'),
+		'id'            => 'sidebar-primary',
+		'name'          => __('Sidebar Primary', 'milano'),
 		'description'   => __('Primary sidebar (content navigation).', 'milano'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',

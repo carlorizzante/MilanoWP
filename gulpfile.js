@@ -38,10 +38,11 @@ var config = require('./gulp.config.js');
 
 
 /**
-* BOWER
- * Updates Bower dependencies into the folder "vendor"
+ * VENDOR
+ * Installs or updates Bower dependencies into the "vendor" folder
+ * Requires Bower installed globally (see https://bower.io/)
  */
-gulp.task('bower', function() {
+gulp.task('vendor', function() {
   return bower({ cmd: 'update'})
     .pipe(gulp.dest('./vendor'))
 });

@@ -18,7 +18,7 @@
 
 	<section class="entry-content" itemprop="articleBody">
 		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('full'); ?></a>
-		<?php the_content('<button class="tiny">' . __( 'Read more...', 'milano' ) . '</button>'); ?>
+		<?php the_excerpt('<button class="tiny">' . __( 'Read more...', 'milano' ) . '</button>'); ?>
 	</section> <!-- END article > section -->
 
 	<footer class="entry-footer">

@@ -13,6 +13,21 @@
  */
 
 
+/**
+ * Load jQuery 2.2.4 from /vendor
+ *
+ * @since 0.9.1
+ */
+function milano_load_jquery_from_vendor() {
+  if (!is_admin()) {
+    $jquery_url = get_template_directory_uri() . '/vendor/jquery/dist/jquery.min.js';
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', $jquery_url, false, '2.2.4');
+    wp_enqueue_script('jquery');
+  }
+}
+add_action('init', 'milano_load_jquery_from_vendor');
+
 
 /**
  * Load scripts and stylesheets for the front end.

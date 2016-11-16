@@ -4134,8 +4134,8 @@ li > i {
  * page and use class selectors where appropriate.
  *
  * However, you may want to use classes for layout modifiers
- * that can be applied across the entire site, and to
- * multiple elements on the same page.
+ * that can be applied across the entire site and to multiple
+ * elements on the same page.
  *
  * {@link https://smacss.com/book/type-layout}
  *
@@ -4155,17 +4155,20 @@ li > i {
   max-width: 100%;
   height: auto; }
 
-.entry-content .alignleft, .entry-content img.alignleft {
+.entry-content .alignleft, .entry-content img.alignleft,
+.entry-content .align-left, .entry-content img.align-left {
   margin-right: 1.5em;
   display: inline;
   float: left; }
 
-.entry-content .alignright, .entry-content img.alignright {
+.entry-content .alignright, .entry-content img.alignright,
+.entry-content .align-right, .entry-content img.align-right {
   margin-left: 1.5em;
   display: inline;
   float: right; }
 
-.entry-content .aligncenter, .entry-content img.aligncenter {
+.entry-content .aligncenter, .entry-content img.aligncenter,
+.entry-content .align-center, .entry-content img.align-center {
   margin-right: auto;
   margin-left: auto;
   display: block;
@@ -4454,9 +4457,6 @@ li > i {
  *
  * Below an example, where the theme-class will be applied to
  * the body of the page procedurally via PHP or via Javascript.
- *
- * Remember to remove the comment in _main.scss if you
- * want to import this file into the final style.css file
  *
  * @package MilanoWP
  * @since 0.9.0
